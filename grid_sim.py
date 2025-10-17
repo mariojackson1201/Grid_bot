@@ -232,11 +232,11 @@ def run():
     - Grid sizes: 10, 20, 30, 50 pips
     - Number of levels: 5, 10, 15, 20
     """
-    currencies = "GBP,EUR,USD,CAD,JPY,NZD,CHF"
+    currencies = "EUR,USD"
     granularity = "H1"
 
     # Grid parameters to test
-    grid_sizes = [10, 20, 30, 50]  # pips
+    grid_sizes = [5, 10]  # pips
     num_levels_list = [5, 10, 15, 20]  # number of levels above/below center
 
     test_pairs = instrument.Instrument.get_pairs_from_string(currencies)
