@@ -6,17 +6,15 @@ import utils
 from oanda_api import OandaAPI
 
 INCREMENTS = {
-    'M5' : 5,
-    'H1' : 60,
-    'H4' : 240
+    'M1' : 1
 }
 
 def create_file(pair, granularity, api):
     candle_count = 2000
     time_step = INCREMENTS[granularity] * candle_count
 
-    end_date = utils.get_utc_dt_from_string("2025-10-16 23:59:59")
-    date_from = utils.get_utc_dt_from_string("2025-09-16 00:00:00")
+    end_date = utils.get_utc_dt_from_string("2025-10-15 23:59:59")
+    date_from = utils.get_utc_dt_from_string("2025-10-15 00:00:00")
 
     candle_dfs = []
 
@@ -45,7 +43,7 @@ def create_file(pair, granularity, api):
     print(f"{pair} {granularity} {final_df.iloc[0].time}  {final_df.iloc[-1].time}")
 
 def run_collection():
-    pair_list = "EUR,GBP"
+    pair_list = "EUR,USD"
     api = OandaAPI()
     for g in INCREMENTS.keys():
         for i in Instrument.get_pairs_from_string(pair_list):

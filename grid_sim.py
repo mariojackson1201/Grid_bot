@@ -80,10 +80,12 @@ class GridStrategy:
         if below_level and below_level.position == 0:
             # Price crossed below this level - open long position
             self.open_position(below_level, timestamp, price, 1, pip_location)
+            self.open_position(above_level, timestamp, price, -1, pip_location)
 
         if above_level and above_level.position == 0:
             # Price crossed above this level - open short position
             self.open_position(above_level, timestamp, price, -1, pip_location)
+            self.open_position(below_level, timestamp, price, 1, pip_location)
 
         # Check for profit taking on existing positions
         for level in self.grid_levels:
@@ -233,7 +235,7 @@ def run():
     - Number of levels: 5, 10, 15, 20
     """
     currencies = "EUR,USD"
-    granularity = "H1"
+    granularity = "M1"
 
     # Grid parameters to test
     grid_sizes = [5, 10]  # pips

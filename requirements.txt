@@ -1,2 +1,6 @@
 pandas
 matplotlib
+requests
+python-dateutil
+numpy
+jupyter
