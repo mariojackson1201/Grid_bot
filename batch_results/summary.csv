@@ -1,0 +1,3 @@
+name,source,instrument,granularity,start,end,levels,distance_pips,total_trades,wins,losses,win_rate,total_pips,avg_pips_per_trade,max_drawdown_pips,trades_csv,equity_png
+EURUSD_10pips,oanda:EUR_USD:M1,EUR_USD,M1,2021-05-24T00:00:00Z,2022-09-27T00:00:00Z,2000,10.0,19260,18754,506,97.37,-480430.0,-24.944,-667970.0,./batch_results\EURUSD_10pips_trades.csv,./batch_results\EURUSD_10pips_equity.png
+EURUSD_longer,oanda:EUR_USD:M1,EUR_USD,M1,2021-05-24T00:00:00Z,2023-02-02T00:00:00Z,2000,10.0,28086,27587,499,98.22,-66312.4,-2.361,-342172.40000000235,./batch_results\EURUSD_longer_trades.csv,./batch_results\EURUSD_longer_equity.png

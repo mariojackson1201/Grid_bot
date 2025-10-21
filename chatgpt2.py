@@ -419,13 +419,13 @@ class GridBacktester:
 # ---------------------------
 if __name__ == "__main__":
     OANDA_TOKEN = "28ea3ce61c08a436f559a2aa4f49cab2-c6732cd18d2ec0bbe4f8579adb722602"
-    START = "2025-10-10T00:00:00Z"
-    END = "2025-10-15T11:03:00Z"
+    START="2021-05-24T00:00:00Z"
+    END="2022-09-27T00:00:00Z"
     INSTRUMENT = "EUR_USD"
-    GRANULARITY = "H1"
+    GRANULARITY = "M1"
 
     # Grid configuration
-    LEVELS = 50
+    LEVELS = 2000
     DISTANCE_PIPS = 10
     UP_MAX = None
     BELOW_MAX = None
